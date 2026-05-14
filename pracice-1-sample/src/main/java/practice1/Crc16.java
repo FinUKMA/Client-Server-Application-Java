@@ -41,7 +41,10 @@ public class Crc16 {
     };
 
     public static short calculateCrc(String arg) {
-        byte[] bytes = arg.getBytes();
+        return calculateCrc(arg.getBytes());
+    }
+
+    public static short calculateCrc(byte[] bytes) {
         int crc = 0x0000;
         for (byte b : bytes) {
             crc = (crc >>> 8) ^ TABLE[(crc ^ b) & 0xff];
