@@ -1,9 +1,6 @@
 package practice2;
 
 import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -29,10 +26,6 @@ public class ExecutorServiceExample {
                 "age", 45
             );
         });
-
-        new ConcurrentHashMap<>();
-        new ArrayBlockingQueue<>(1);
-        new CopyOnWriteArrayList<>();
 
         System.out.println("Completed? " + getUserByIdResult.isDone());
         System.out.println(getUserByIdResult.get(10L, TimeUnit.MILLISECONDS));
