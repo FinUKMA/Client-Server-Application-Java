@@ -18,7 +18,7 @@ public class ObjectClient {
             oos.flush();
             oos.close();
         } finally {
-            System.out.println("закриваємо клієнт");
+            System.out.println("Close client");
         }
     }
 }
